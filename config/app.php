@@ -191,7 +191,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         // Package Service Providers that aren't auto-discover...
-
+        Cmgmyr\Messenger\MessengerServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         // Application Service Providers...
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,

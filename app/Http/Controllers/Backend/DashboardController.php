@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\Auth\User;
+use App\Models\Auth\SocialAccount;
 use App\Http\Controllers\Controller;
 
 /**
@@ -14,6 +16,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('backend.dashboard');
+        $user = User::where('active', 1)->count();
+        $newuser = User::where('active', 0)->count();
+        $fb = SocialAccount::where('provider', 'facebook')->count();
+        $tw = SocialAccount::where('provider', 'twitter')->count();
+        return view('backend.dashboard',compact('user','newuser','fb','tw'));
     }
 }
