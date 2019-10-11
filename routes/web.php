@@ -10,14 +10,15 @@ use App\Http\Controllers\LanguageController;
 // Switch between the included languages
 Route::get('lang/{lang}', [LanguageController::class, 'swap']);
 
-/*
- * Frontend Routes
- * Namespaces indicate folder structure
- */
-Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-    include_route_files(__DIR__.'/frontend/');
+Route::group(['middleware' => ['web', 'activity']], function () {
+    /*
+    * Frontend Routes
+    * Namespaces indicate folder structure
+    */
+    Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+        include_route_files(__DIR__.'/frontend/');
+    });
 });
-
 /*
  * Backend Routes
  * Namespaces indicate folder structure
