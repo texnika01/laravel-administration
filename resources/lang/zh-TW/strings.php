@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Strings Language Lines
@@ -25,11 +26,21 @@ return [
             'title' => '管理儀表板',
             'welcome' => '歡迎',
         ],
-
+		'messages' => [
+			'index' => 'You messages',
+			'no_messages' => 'Sorry, no threads.',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+		],
         'general' => [
             'all_rights_reserved' => '保留所有權利。 ',
             'are_you_sure' => '你確定嗎？ ',
-            'boilerplate_link' => 'Laravel Boilerplate',
+            'boilerplate_link' => 'Laravel 5 Boilerplate',
             'continue' => '繼續',
             'member_since' => '會員自',
             'minutes' => ' 分鐘',
@@ -117,13 +128,13 @@ return [
         ],
 
         'general' => [
-            'joined' => 'Joined',
+            'joined'        => 'Joined',
         ],
 
         'user' => [
             'change_email_notice' => 'If you change your e-mail you will be logged out until you confirm your new e-mail address.',
             'email_changed_notice' => 'You must confirm your new e-mail address before you can log in again.',
-            'profile_updated' => 'Profile successfully updated.',
+            'profile_updated'  => 'Profile successfully updated.',
             'password_updated' => 'Password successfully updated.',
         ],
 

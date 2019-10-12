@@ -1,0 +1,1 @@
+<p>@lang('strings.backend.messages.no_messages')</p>

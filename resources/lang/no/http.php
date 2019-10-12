@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | HTTP Language Lines
@@ -11,12 +12,12 @@ return [
     */
 
     '404' => [
-        'title' => 'Siden finnes ikke',
+        'title'       => 'Siden finnes ikke',
         'description' => 'Beklager, men siden, du forsøkte at se, finnes ikke.',
     ],
 
     '503' => [
-        'title' => 'Er snart tilbake.',
+        'title'       => 'Er snart tilbake.',
         'description' => 'Er snart tilbake.',
     ],
 ];
