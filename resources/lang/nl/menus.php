@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Menus Language Lines
@@ -17,36 +18,36 @@ return [
             'title' => 'Toegangs Beheer',
 
             'roles' => [
-                'all' => 'Alle Rollen',
-                'create' => 'Creëer Rol',
-                'edit' => 'Rol aanpassen',
+                'all'        => 'Alle Rollen',
+                'create'     => 'Creëer Rol',
+                'edit'       => 'Rol aanpassen',
                 'management' => 'Rol Beheer',
-                'main' => 'Rollen',
+                'main'       => 'Rollen',
             ],
 
             'users' => [
-                'all' => 'Alle Gebruikers',
+                'all'             => 'Alle Gebruikers',
                 'change-password' => 'Wachtwoord veranderen',
-                'create' => 'Gebruiker aanmaken',
-                'deactivated' => 'Gedeactiveerde Gebruikers',
-                'deleted' => 'Verwijderde Gebruikers',
-                'edit' => 'Gebruiker aanpassen',
-                'main' => 'Gebruikers',
-                'view' => 'Bekijk Gebruiker',
+                'create'          => 'Gebruiker aanmaken',
+                'deactivated'     => 'Gedeactiveerde Gebruikers',
+                'deleted'         => 'Verwijderde Gebruikers',
+                'edit'            => 'Gebruiker aanpassen',
+                'main'            => 'Gebruikers',
+                'view'            => 'Bekijk Gebruiker',
             ],
         ],
 
         'log-viewer' => [
-            'main' => 'Logs',
+            'main'      => 'Log Viewer',
             'dashboard' => 'Dashboard',
-            'logs' => 'Logs',
+            'logs'      => 'Logs',
         ],
 
         'sidebar' => [
             'dashboard' => 'Dashboard',
-            'general' => 'Algemeen',
-            'history' => 'Geschiedenis',
-            'system' => 'Systeem',
+            'general'   => 'Algemeen',
+            'history'   => 'History',
+            'system'    => 'System',
         ],
     ],
 
@@ -59,29 +60,27 @@ return [
          * Be sure to add the new language in alphabetical order.
          */
         'langs' => [
-            'ar' => 'Arabisch (Arabic)',
-            'az' => 'Azerbaijan',
-            'zh' => 'Chinees (Chinese Simplified)',
-            'zh-TW' => 'Chinees (Chinese Traditional)',
-            'da' => 'Deens (Danish)',
-            'de' => 'Duits (German)',
-            'el' => 'Grieks (Greek)',
-            'en' => 'Engels (English)',
-            'es' => 'Spaans (Spanish)',
-            'fa' => 'Perzisch (Persian)',
-            'fr' => 'Frans (French)',
-            'he' => 'Hebreeuws (Hebrew)',
-            'id' => 'Indonesisch (Indonesian)',
-            'it' => 'Italiaans (Italian)',
-            'ja' => 'Japans (Japanese)',
-            'nl' => 'Nederlands (Dutch)',
-            'no' => 'Noors (Norwegin)',
+            'ar'    => 'Arabisch (Arabic)',
+            'zh'    => '(Chinese Simplified)',
+            'zh-TW' => '(Chinese Traditional)',
+            'da'    => 'Deens (Danish)',
+            'de'    => 'Duits (German)',
+            'el'    => '(Greek)',
+            'en'    => 'Engels (English)',
+            'es'    => 'Spaans (Spanish)',
+            'fa'    => 'Perzisch (Persian)',
+            'fr'    => 'Frans (French)',
+            'he'    => 'Hebreeuws (Hebrew)',
+            'id'    => 'Indonesisch (Indonesian)',
+            'it'    => 'Italiaans (Italian)',
+            'ja'    => '(Japanese)',
+            'nl'    => 'Nederlands (Dutch)',
+            'no'    => 'Noors (Norwegin)',
             'pt_BR' => 'Braziliaans Portugees (Brazilian Portuguese)',
-            'ru' => 'Russisch (Russian)',
-            'sv' => 'Zweeds (Swedish)',
-            'th' => 'Thais (Thai)',
-            'tr' => 'Turks (Turkish)',
-            'uk' => 'Oekraïens (Ukrainian)',
+            'ru'    => 'Russisch (Russian)',
+            'sv'    => 'Zweeds (Swedish)',
+            'th'    => 'Thais (Thai)',
+            'tr'    => '(Turkish)',
         ],
     ],
 ];

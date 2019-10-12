@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Strings Language Lines
@@ -25,11 +26,21 @@ return [
             'title' => 'Dashboard',
             'welcome' => 'Welcome',
         ],
-
+		'messages' => [
+			'index' => 'You messages',
+			'no_messages' => 'Sorry, no threads.',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+		],
         'general' => [
             'all_rights_reserved' => 'All Rights Reserved.',
             'are_you_sure' => '本当ですか？',
-            'boilerplate_link' => 'Laravel Boilerplate',
+            'boilerplate_link' => 'Laravel 5 Boilerplate',
             'continue' => 'Continue',
             'member_since' => '会員登録日',
             'minutes' => ' 分',
@@ -117,7 +128,7 @@ return [
         ],
 
         'general' => [
-            'joined' => 'Joined',
+            'joined'        => 'Joined',
         ],
 
         'user' => [
