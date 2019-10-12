@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 6.0.1 on 2019-10-11 16:23:53.
+ * Generated for Laravel 6.2.0 on 2019-10-12 15:03:18.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1792,6 +1792,18 @@ namespace Illuminate\Support\Facades {
         {
                         /** @var \Illuminate\Auth\AuthManager $instance */
                         return $instance->provider($name, $callback);
+        }
+        
+        /**
+         * Determines if any guards have already been resolved.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasResolvedGuards()
+        {
+                        /** @var \Illuminate\Auth\AuthManager $instance */
+                        return $instance->hasResolvedGuards();
         }
         
         /**
@@ -3858,110 +3870,6 @@ namespace Illuminate\Support\Facades {
         public static function hasMacro($name)
         {
                         return \Illuminate\Cookie\CookieJar::hasMacro($name);
-        }
-         
-    }
-
-    /**
-     * 
-     *
-     * @see \Illuminate\Encryption\Encrypter
-     */ 
-    class Crypt {
-        
-        /**
-         * Determine if the given key and cipher combination is valid.
-         *
-         * @param string $key
-         * @param string $cipher
-         * @return bool 
-         * @static 
-         */ 
-        public static function supported($key, $cipher)
-        {
-                        return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
-        }
-        
-        /**
-         * Create a new encryption key for the given cipher.
-         *
-         * @param string $cipher
-         * @return string 
-         * @static 
-         */ 
-        public static function generateKey($cipher)
-        {
-                        return \Illuminate\Encryption\Encrypter::generateKey($cipher);
-        }
-        
-        /**
-         * Encrypt the given value.
-         *
-         * @param mixed $value
-         * @param bool $serialize
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\EncryptException
-         * @static 
-         */ 
-        public static function encrypt($value, $serialize = true)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->encrypt($value, $serialize);
-        }
-        
-        /**
-         * Encrypt a string without serialization.
-         *
-         * @param string $value
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\EncryptException
-         * @static 
-         */ 
-        public static function encryptString($value)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->encryptString($value);
-        }
-        
-        /**
-         * Decrypt the given value.
-         *
-         * @param string $payload
-         * @param bool $unserialize
-         * @return mixed 
-         * @throws \Illuminate\Contracts\Encryption\DecryptException
-         * @static 
-         */ 
-        public static function decrypt($payload, $unserialize = true)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->decrypt($payload, $unserialize);
-        }
-        
-        /**
-         * Decrypt the given string without unserialization.
-         *
-         * @param string $payload
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\DecryptException
-         * @static 
-         */ 
-        public static function decryptString($payload)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->decryptString($payload);
-        }
-        
-        /**
-         * Get the encryption key.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getKey()
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->getKey();
         }
          
     }
@@ -6560,6 +6468,18 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * 
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getChannels()
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        return $instance->getChannels();
+        }
+        
+        /**
          * Get the default log driver name.
          *
          * @return string 
@@ -6596,6 +6516,19 @@ namespace Illuminate\Support\Facades {
         {
                         /** @var \Illuminate\Log\LogManager $instance */
                         return $instance->extend($driver, $callback);
+        }
+        
+        /**
+         * Unset the given channel instance.
+         *
+         * @param string|null $name
+         * @return \Illuminate\Log\LogManager 
+         * @static 
+         */ 
+        public static function forgetChannel($driver = null)
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        return $instance->forgetChannel($driver);
         }
         
         /**
@@ -11429,6 +11362,18 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Register the typical confirm password routes for an application.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function confirmPassword()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->confirmPassword();
+        }
+        
+        /**
          * Register the typical email verification routes for an application.
          *
          * @return void 
@@ -12962,7 +12907,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $path
          * @return resource|null The path resource or null on failure.
-         * @throws FileNotFoundException
+         * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
          * @static 
          */ 
         public static function readStream($path)
@@ -12979,7 +12924,7 @@ namespace Illuminate\Support\Facades {
          * @param array $options
          * @return bool 
          * @throws \InvalidArgumentException If $resource is not a file handle.
-         * @throws FileExistsException
+         * @throws \Illuminate\Contracts\Filesystem\FileExistsException
          * @static 
          */ 
         public static function writeStream($path, $resource, $options = array())
@@ -13298,6 +13243,33 @@ namespace Illuminate\Support\Facades {
         {
                         /** @var \Illuminate\Routing\UrlGenerator $instance */
                         return $instance->hasValidSignature($request, $absolute);
+        }
+        
+        /**
+         * Determine if the signature from the given request matches the URL.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @param bool $absolute
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasCorrectSignature($request, $absolute = true)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->hasCorrectSignature($request, $absolute);
+        }
+        
+        /**
+         * Determine if the expires timestamp from the given request is not from the past.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @return bool 
+         * @static 
+         */ 
+        public static function signatureHasNotExpired($request)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->signatureHasNotExpired($request);
         }
         
         /**
@@ -16676,6 +16648,17 @@ namespace Facade\Ignition\Facades {
          *
          * @static 
          */ 
+        public static function reportMessage($message, $logLevel, $callback = null)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->reportMessage($message, $logLevel, $callback);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
         public static function sendTestReport($throwable)
         {
                         /** @var \Facade\FlareClient\Flare $instance */
@@ -16713,6 +16696,17 @@ namespace Facade\Ignition\Facades {
         {
                         /** @var \Facade\FlareClient\Flare $instance */
                         return $instance->createReport($throwable);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function createReportFromMessage($message, $logLevel)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->createReportFromMessage($message, $logLevel);
         }
         
         /**
@@ -18025,6 +18019,23 @@ namespace Spatie\Html\Facades {
         /**
          * 
          *
+         * @param string|null $name
+         * @param string|null $value
+         * @param string|null $min
+         * @param string|null $max
+         * @param string|null $step
+         * @return \Spatie\Html\Elements\Input 
+         * @static 
+         */ 
+        public static function number($name = null, $value = null, $min = null, $max = null, $step = null)
+        {
+                        /** @var \Spatie\Html\Html $instance */
+                        return $instance->number($name, $value, $min, $max, $step);
+        }
+        
+        /**
+         * 
+         *
          * @param string|null $text
          * @param string|null $value
          * @param bool $selected
@@ -18385,302 +18396,6 @@ namespace Torann\GeoIP\Facades {
  
 }
 
-namespace Arcanedev\LogViewer\Facades { 
-
-    /**
-     * Class     LogViewer
-     *
-     * @package Arcanedev\LogViewer\Facades
-     * @author ARCANEDEV <arcanedev.maroc@gmail.com>
-     */ 
-    class LogViewer {
-        
-        /**
-         * Get the log levels.
-         *
-         * @param bool $flip
-         * @return array 
-         * @static 
-         */ 
-        public static function levels($flip = false)
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->levels($flip);
-        }
-        
-        /**
-         * Get the translated log levels.
-         *
-         * @param string|null $locale
-         * @return array 
-         * @static 
-         */ 
-        public static function levelsNames($locale = null)
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->levelsNames($locale);
-        }
-        
-        /**
-         * Set the log storage path.
-         *
-         * @param string $path
-         * @return self 
-         * @static 
-         */ 
-        public static function setPath($path)
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->setPath($path);
-        }
-        
-        /**
-         * Get the log pattern.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getPattern()
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->getPattern();
-        }
-        
-        /**
-         * Set the log pattern.
-         *
-         * @param string $date
-         * @param string $prefix
-         * @param string $extension
-         * @return self 
-         * @static 
-         */ 
-        public static function setPattern($prefix = 'laravel-', $date = '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]', $extension = '.log')
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->setPattern($prefix, $date, $extension);
-        }
-        
-        /**
-         * Get all logs.
-         *
-         * @return \Arcanedev\LogViewer\Entities\LogCollection 
-         * @static 
-         */ 
-        public static function all()
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->all();
-        }
-        
-        /**
-         * Paginate all logs.
-         *
-         * @param int $perPage
-         * @return \Illuminate\Pagination\LengthAwarePaginator 
-         * @static 
-         */ 
-        public static function paginate($perPage = 30)
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->paginate($perPage);
-        }
-        
-        /**
-         * Get a log.
-         *
-         * @param string $date
-         * @return \Arcanedev\LogViewer\Entities\Log 
-         * @static 
-         */ 
-        public static function get($date)
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->get($date);
-        }
-        
-        /**
-         * Get the log entries.
-         *
-         * @param string $date
-         * @param string $level
-         * @return \Arcanedev\LogViewer\Entities\LogEntryCollection 
-         * @static 
-         */ 
-        public static function entries($date, $level = 'all')
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->entries($date, $level);
-        }
-        
-        /**
-         * Download a log file.
-         *
-         * @param string $date
-         * @param string|null $filename
-         * @param array $headers
-         * @return \Symfony\Component\HttpFoundation\BinaryFileResponse 
-         * @static 
-         */ 
-        public static function download($date, $filename = null, $headers = array())
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->download($date, $filename, $headers);
-        }
-        
-        /**
-         * Get logs statistics.
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function stats()
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->stats();
-        }
-        
-        /**
-         * Get logs statistics table.
-         *
-         * @param string|null $locale
-         * @return \Arcanedev\LogViewer\Tables\StatsTable 
-         * @static 
-         */ 
-        public static function statsTable($locale = null)
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->statsTable($locale);
-        }
-        
-        /**
-         * Delete the log.
-         *
-         * @param string $date
-         * @return bool 
-         * @static 
-         */ 
-        public static function delete($date)
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->delete($date);
-        }
-        
-        /**
-         * Clear the log files.
-         *
-         * @return bool 
-         * @static 
-         */ 
-        public static function clear()
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->clear();
-        }
-        
-        /**
-         * Get all valid log files.
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function files()
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->files();
-        }
-        
-        /**
-         * List the log files (only dates).
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function dates()
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->dates();
-        }
-        
-        /**
-         * Get logs count.
-         *
-         * @return int 
-         * @static 
-         */ 
-        public static function count()
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->count();
-        }
-        
-        /**
-         * Get entries total from all logs.
-         *
-         * @param string $level
-         * @return int 
-         * @static 
-         */ 
-        public static function total($level = 'all')
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->total($level);
-        }
-        
-        /**
-         * Get logs tree.
-         *
-         * @param bool $trans
-         * @return array 
-         * @static 
-         */ 
-        public static function tree($trans = false)
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->tree($trans);
-        }
-        
-        /**
-         * Get logs menu.
-         *
-         * @param bool $trans
-         * @return array 
-         * @static 
-         */ 
-        public static function menu($trans = true)
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->menu($trans);
-        }
-        
-        /**
-         * Determine if the log folder is empty or not.
-         *
-         * @return bool 
-         * @static 
-         */ 
-        public static function isEmpty()
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->isEmpty();
-        }
-        
-        /**
-         * Get the LogViewer version.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function version()
-        {
-                        /** @var \Arcanedev\LogViewer\LogViewer $instance */
-                        return $instance->version();
-        }
-         
-    }
- 
-}
-
 
 namespace  { 
 
@@ -18703,8 +18418,6 @@ namespace  {
     class Config extends \Illuminate\Support\Facades\Config {}
 
     class Cookie extends \Illuminate\Support\Facades\Cookie {}
-
-    class Crypt extends \Illuminate\Support\Facades\Crypt {}
 
     class DB extends \Illuminate\Support\Facades\DB {}
 
@@ -19313,6 +19026,43 @@ namespace  {
             }
          
             /**
+             * Checks if a macro is registered.
+             *
+             * @param string $name
+             * @return bool 
+             * @static 
+             */ 
+            public static function hasMacro($name)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->hasMacro($name);
+            }
+         
+            /**
+             * Get the given global macro by name.
+             *
+             * @param string $name
+             * @return \Closure 
+             * @static 
+             */ 
+            public static function getGlobalMacro($name)
+            {
+                                return \Illuminate\Database\Eloquent\Builder::getGlobalMacro($name);
+            }
+         
+            /**
+             * Checks if a global macro is registered.
+             *
+             * @param string $name
+             * @return bool 
+             * @static 
+             */ 
+            public static function hasGlobalMacro($name)
+            {
+                                return \Illuminate\Database\Eloquent\Builder::hasGlobalMacro($name);
+            }
+         
+            /**
              * Chunk the results of the query.
              *
              * @param int $count
@@ -19376,7 +19126,7 @@ namespace  {
              * Execute the query and get the first result.
              *
              * @param array $columns
-             * @return \Illuminate\Database\Eloquent\Model|object|null 
+             * @return \Illuminate\Database\Eloquent\Model|object|static|null 
              * @static 
              */ 
             public static function first($columns = array())
@@ -20192,15 +19942,15 @@ namespace  {
             /**
              * Add a "where not null" clause to the query.
              *
-             * @param string $column
+             * @param string|array $columns
              * @param string $boolean
              * @return \Illuminate\Database\Query\Builder|static 
              * @static 
              */ 
-            public static function whereNotNull($column, $boolean = 'and')
+            public static function whereNotNull($columns, $boolean = 'and')
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
-                                return $instance->whereNotNull($column, $boolean);
+                                return $instance->whereNotNull($columns, $boolean);
             }
          
             /**
@@ -21423,18 +21173,6 @@ namespace  {
             }
          
             /**
-             * Checks if macro is registered.
-             *
-             * @param string $name
-             * @return bool 
-             * @static 
-             */ 
-            public static function hasMacro($name)
-            {
-                                return \Illuminate\Database\Query\Builder::hasMacro($name);
-            }
-         
-            /**
              * Dynamically handle calls to the class.
              *
              * @param string $method
@@ -21517,8 +21255,6 @@ namespace  {
     class Html extends \Spatie\Html\Facades\Html {}
 
     class GeoIP extends \Torann\GeoIP\Facades\GeoIP {}
-
-    class LogViewer extends \Arcanedev\LogViewer\Facades\LogViewer {}
  
 }
 

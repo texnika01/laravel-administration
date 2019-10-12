@@ -1,11 +1,11 @@
 {
-    "name": "rappasoft/laravel-boilerplate",
+    "name": "texnika01/laravel-administration",
     "type": "project",
-    "description": "The Laravel Boilerplate Project.",
+    "description": "The Laravel Administration Project.",
     "keywords": [
         "framework",
         "laravel",
-        "boilerplate"
+        "administration"
     ],
     "license": "MIT",
     "require": {
