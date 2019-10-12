@@ -1,6 +1,6 @@
 {
-    "name": "@rappasoft/laravel-boilerplate",
-    "author": "rappasoft rappa819@gmail.com",
+    "name": "@texnika01/laravel-administration",
+    "author": "texnika01 texnika01@gmail.com",
     "private": true,
     "license": "MIT",
     "scripts": {
