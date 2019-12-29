@@ -78,6 +78,7 @@ return [
             'no' => 'Noors (Norwegin)',
             'pt_BR' => 'Braziliaans Portugees (Brazilian Portuguese)',
             'ru' => 'Russisch (Russian)',
+            'bg' => 'Български (Български)',
             'sv' => 'Zweeds (Swedish)',
             'th' => 'Thais (Thai)',
             'tr' => 'Turks (Turkish)',

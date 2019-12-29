@@ -78,6 +78,7 @@ return [
             'no' => 'Norsk (Norwegian)',
             'es' => 'Spanska (Spanish)',
             'ru' => 'Ryska (Russian)',
+            'bg' => 'Български (Български)',
             'sv' => 'Svenska (Swedish)',
             'th' => 'Thailändska (Thai)',
             'tr' => '(Turkish)',

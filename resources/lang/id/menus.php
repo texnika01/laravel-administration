@@ -78,6 +78,7 @@ return [
             'no' => 'Norwegia (Norwegian)',
             'pt_BR' => 'Bahasa Portugis Brasil (Brazilian Portuguese)',
             'ru' => 'Rusia (Russian)',
+            'bg' => 'Български (Български)',
             'sv' => 'Swedia (Swedish)',
             'th' => 'Bahasa (Thai)',
             'tr' => '(Turkish)',

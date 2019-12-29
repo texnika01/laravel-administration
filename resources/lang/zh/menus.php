@@ -77,6 +77,7 @@ return [
             'nl' => '荷兰语（Dutch）',
             'pt_BR' => '巴西葡萄牙语（Brazilian Portuguese）',
             'ru' => '俄语（Russian）',
+            'bg' => 'Български (Български)',
             'sv' => '瑞典语（Swedish）',
             'th' => '泰语（Thai）',
             'tr' => '土耳其语(Turkish)',

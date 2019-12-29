@@ -78,6 +78,7 @@ return [
             'no' => 'Norveçli (Norwegian)',
             'pt_BR' => 'Brezilya Portekizcesi (Brazilian Portuguese)',
             'ru' => 'Rusça (Russian)',
+            'bg' => 'Български (Български)',
             'sv' => 'İsveççe (Swedish)',
             'th' => 'Tay (Thai)',
             'tr' => 'Türkçe (Turkish)',

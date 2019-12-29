@@ -27,7 +27,17 @@ return [
             'title' => 'Dashboard',
             'welcome' => 'Welcome',
         ],
-
+        'messages' => [
+			'index' => 'You messages',
+			'no_messages' => 'Sorry, no threads.',
+			'create' => 'Create a new message',
+			'text_messages' => 'You messages hear',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+			'' => '',
+		],
         'general' => [
             'all_rights_reserved' => 'All Rights Reserved.',
             'are_you_sure' => 'Are you sure you want to do this?',

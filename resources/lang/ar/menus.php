@@ -78,6 +78,7 @@ return [
             'no' => '(Norwegian)',
             'pt_BR' => 'البرازيلية البرتغالية (Brazilian Portuguese)',
             'ru' => '(Russian) الروسية',
+            'bg'    => 'Български (Български)',
             'sv' => 'السويسرية (Swedish)',
             'th' => '(Thai)',
             'tr' => 'اللغة التركية(Turkish)',
