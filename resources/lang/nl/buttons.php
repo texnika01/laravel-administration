@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Buttons Language Lines
@@ -15,16 +16,16 @@ return [
     'backend' => [
         'access' => [
             'users' => [
-                'activate' => 'Activeren',
-                'change_password' => 'Verander Wachtwoord',
-                'clear_session' => 'Sessies leegmaken',
-                'confirm' => 'Bevestigen',
-                'deactivate' => 'Deactiveren',
+                'activate'           => 'Activeren',
+                'change_password'    => 'Verander Wachtwoord',
+                'clear_session'         => 'Clear Session',
+                'confirm'             => 'Confirm',
+                'deactivate'         => 'Deactiveren',
                 'delete_permanently' => 'Permanent verwijderen',
-                'login_as' => 'Aanmelden als :user',
-                'resend_email' => 'Bevestigingsmail nogmaals verzenden',
-                'restore_user' => 'Gebruiker herstellen',
-                'unconfirm' => 'Bevestiging ongedaan maken',
+                'login_as'           => 'Aanmelden als :user',
+                'resend_email'       => 'Bevestigings email nogmaals zenden',
+                'restore_user'       => 'Gebruiker herstellen',
+                'unconfirm'             => 'Un-confirm',
                 'unlink' => 'Unlink',
             ],
         ],
@@ -32,24 +33,24 @@ return [
 
     'emails' => [
         'auth' => [
-            'confirm_account' => 'Account bevestigen',
-            'reset_password' => 'Wachtwoord herstellen',
+            'confirm_account' => 'Account Bevestigen',
+            'reset_password'  => 'Reset Wachtwoord',
         ],
     ],
 
     'general' => [
-        'cancel' => 'Annuleren',
-        'continue' => 'Doorgaan',
+        'cancel' => 'Annuleer',
+        'continue' => 'Continue',
 
         'crud' => [
-            'create' => 'Aanmaken',
-            'delete' => 'Verwijderen',
-            'edit' => 'Aanpassen',
+            'create' => 'Creëer',
+            'delete' => 'Verwijder',
+            'edit'   => 'Aanpassen',
             'update' => 'Bijwerken',
-            'view' => 'Bekijken',
+            'view'   => 'Bekijk',
         ],
 
         'save' => 'Opslaan',
-        'view' => 'Bekijken',
+        'view' => 'Bekijk',
     ],
 ];

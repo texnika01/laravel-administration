@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Menus Language Lines
@@ -17,36 +18,36 @@ return [
             'title' => 'Gestione accessi',
 
             'roles' => [
-                'all' => 'Tutti i ruoli',
-                'create' => 'Crea ruolo',
-                'edit' => 'Modifica ruolo',
+                'all'        => 'Tutti i ruoli',
+                'create'     => 'Crea ruolo',
+                'edit'       => 'Modifica ruolo',
                 'management' => 'Gestione ruoli',
-                'main' => 'Ruoli',
+                'main'       => 'Ruoli',
             ],
 
             'users' => [
-                'all' => 'Tutti gli utenti',
+                'all'             => 'Tutti gli utenti',
                 'change-password' => 'Cambia password',
-                'create' => 'Crea utente',
-                'deactivated' => 'Utenti disattivati',
-                'deleted' => 'Utenti eliminati',
-                'edit' => 'Modifica utente',
-                'main' => 'Utenti',
-                'view' => 'View User',
+                'create'          => 'Crea utente',
+                'deactivated'     => 'Utenti disattivati',
+                'deleted'         => 'Utenti eliminati',
+                'edit'            => 'Modifica utente',
+                'main'            => 'Utenti',
+                'view'            => 'View User',
             ],
         ],
 
         'log-viewer' => [
-            'main' => 'Log',
+            'main'      => 'Log',
             'dashboard' => 'Dashboard',
-            'logs' => 'Logs',
+            'logs'      => 'Logs',
         ],
 
         'sidebar' => [
             'dashboard' => 'Dashboard',
-            'general' => 'Generale',
-            'history' => 'History',
-            'system' => 'System',
+            'general'   => 'Generale',
+            'history'   => 'History',
+            'system'    => 'System',
         ],
     ],
 
@@ -59,30 +60,36 @@ return [
          * Be sure to add the new language in alphabetical order.
          */
         'langs' => [
-            'ar' => 'العربية (Arabic)',
-            'az' => 'Azerbaijan',
-            'zh' => '(Chinese Simplified)',
+            'ar'    => 'العربية (Arabic)',
+            'zh'    => '(Chinese Simplified)',
             'zh-TW' => '(Chinese Traditional)',
-            'da' => 'Danese (Danish)',
-            'de' => 'Tedesco (German)',
-            'el' => '(Greek)',
-            'en' => 'Inglese (English)',
-            'es' => 'Spagnol (Spanish)',
-            'fa' => 'Persiano (Persian)',
-            'fr' => 'Francese (French)',
-            'he' => 'Ebraico (Hebrew)',
-            'id' => 'Indonesiano (Indonesian)',
-            'it' => 'Italiano (Italian)',
-            'ja' => '(Japanese)',
-            'nl' => 'Olandese (Dutch)',
-            'no' => 'Norvegese (Norwegian)',
+            'da'    => 'Danese (Danish)',
+            'de'    => 'Tedesco (German)',
+            'el'    => '(Greek)',
+            'en'    => 'Inglese (English)',
+            'es'    => 'Spagnol (Spanish)',
+            'fa'    => 'Persiano (Persian)',
+            'fr'    => 'Francese (French)',
+            'he'    => 'Ebraico (Hebrew)',
+            'id'    => 'Indonesiano (Indonesian)',
+            'it'    => 'Italiano (Italian)',
+            'ja'    => '(Japanese)',
+            'nl'    => 'Olandese (Dutch)',
+            'no'    => 'Norvegese (Norwegian)',
             'pt_BR' => 'Portoghese Brasiliano (Brazilian Portuguese)',
+<<<<<<< HEAD
             'ru' => 'Russo (Russian)',
             'bg' => 'Български (Български)',
             'sv' => 'Svedese (Swedish)',
             'th' => '(Thai)',
             'tr' => '(Turkish)',
             'uk' => '(Ukrainian)',
+=======
+            'ru'    => 'Russo (Russian)',
+            'sv'    => 'Svedese (Swedish)',
+            'th'    => '(Thai)',
+            'tr'    => '(Turkish)',
+>>>>>>> 635d9c7410b0cb99eb680b6e71228f63cbb72d49
         ],
     ],
 ];

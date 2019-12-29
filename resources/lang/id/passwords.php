@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Password Reset Language Lines
@@ -13,8 +14,8 @@ return [
     */
 
     'password' => 'Sandi minimal enam karakter dan cocok dengan konfirmasi.',
-    'reset' => 'Sandi Anda sudah direset!',
-    'sent' => 'Kami sudah mengirim email yang berisi tautan untuk mereset kata sandi Anda!',
-    'token' => 'Token reset sandi tidak benar.',
-    'user' => 'Kami tidak dapat menemukan pengguna dengan alamat e-mail tersebut.',
+    'reset'    => 'Sandi Anda sudah direset!',
+    'sent'     => 'Kami sudah mengirim email yang berisi tautan untuk mereset kata sandi Anda!',
+    'token'    => 'Token reset sandi tidak benar.',
+    'user'     => 'Kami tidak dapat menemukan pengguna dengan alamat e-mail tersebut.',
 ];

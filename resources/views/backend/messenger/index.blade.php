@@ -247,7 +247,16 @@ root{--primary-dark-theme: #4638c2;--secondary-dark-theme: #4c4f54;--success-dar
 </div>
 </main>
 </div>
+<<<<<<< HEAD
 </div>
     <!-- end messages template -->
+=======
+
+                        @endif
+                    </div>
+            </div>
+
+    </div>
+>>>>>>> 635d9c7410b0cb99eb680b6e71228f63cbb72d49
 @stop
 

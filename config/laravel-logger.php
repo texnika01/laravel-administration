@@ -149,15 +149,15 @@ return [
 
     // jQuery
     'enablejQueryCDN'           => env('LARAVEL_LOGGER_JQUERY_CDN_ENABLED', true),
-    'JQueryCDN'                 => env('LARAVEL_LOGGER_JQUERY_CDN_URL', 'https://code.jquery.com/jquery-3.2.1.slim.min.js'),
+    'JQueryCDN'                 => env('LARAVEL_LOGGER_JQUERY_CDN_URL', 'https://code.jquery.com/jquery-3.4.1.slim.min.js'),
 
     // Bootstrap
     'enableBootstrapCssCDN'     => env('LARAVEL_LOGGER_BOOTSTRAP_CSS_CDN_ENABLED', true),
-    'bootstrapCssCDN'           => env('LARAVEL_LOGGER_BOOTSTRAP_CSS_CDN_URL', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'),
+    'bootstrapCssCDN'           => env('LARAVEL_LOGGER_BOOTSTRAP_CSS_CDN_URL', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'),
     'enableBootstrapJsCDN'      => env('LARAVEL_LOGGER_BOOTSTRAP_JS_CDN_ENABLED', true),
-    'bootstrapJsCDN'            => env('LARAVEL_LOGGER_BOOTSTRAP_JS_CDN_URL', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'),
+    'bootstrapJsCDN'            => env('LARAVEL_LOGGER_BOOTSTRAP_JS_CDN_URL', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'),
     'enablePopperJsCDN'         => env('LARAVEL_LOGGER_POPPER_JS_CDN_ENABLED', true),
-    'popperJsCDN'               => env('LARAVEL_LOGGER_POPPER_JS_CDN_URL', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'),
+    'popperJsCDN'               => env('LARAVEL_LOGGER_POPPER_JS_CDN_URL', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'),
 
     // Font Awesome
     'enableFontAwesomeCDN'      => env('LARAVEL_LOGGER_FONT_AWESOME_CDN_ENABLED', true),
