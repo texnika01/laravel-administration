@@ -77,19 +77,12 @@ return [
             'nl'    => 'Belanda (Dutch)',
             'no'    => 'Norwegia (Norwegian)',
             'pt_BR' => 'Bahasa Portugis Brasil (Brazilian Portuguese)',
-<<<<<<< HEAD
             'ru' => 'Rusia (Russian)',
             'bg' => 'Български (Български)',
             'sv' => 'Swedia (Swedish)',
             'th' => 'Bahasa (Thai)',
             'tr' => '(Turkish)',
             'uk' => '(Ukrainian)',
-=======
-            'ru'    => 'Rusia (Russian)',
-            'sv'    => 'Swedia (Swedish)',
-            'th'    => 'Bahasa (Thai)',
-            'tr'    => '(Turkish)',
->>>>>>> 635d9c7410b0cb99eb680b6e71228f63cbb72d49
         ],
     ],
 ];

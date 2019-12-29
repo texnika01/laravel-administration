@@ -76,19 +76,12 @@ return [
             'ja'    => '日语（Japanese）',
             'nl'    => '荷兰语（Dutch）',
             'pt_BR' => '巴西葡萄牙语（Brazilian Portuguese）',
-<<<<<<< HEAD
             'ru' => '俄语（Russian）',
             'bg' => 'Български (Български)',
             'sv' => '瑞典语（Swedish）',
             'th' => '泰语（Thai）',
             'tr' => '土耳其语(Turkish)',
             'uk' => '(Ukrainian)',
-=======
-            'ru'    => '俄语（Russian）',
-            'sv'    => '瑞典语（Swedish）',
-            'th'    => '泰语（Thai）',
-            'tr'    => '土耳其语(Turkish)',
->>>>>>> 635d9c7410b0cb99eb680b6e71228f63cbb72d49
         ],
     ],
 ];

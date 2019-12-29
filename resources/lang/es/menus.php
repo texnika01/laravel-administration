@@ -77,19 +77,12 @@ return [
             'nl'    => 'Holandés (Dutch)',
             'no'    => 'Noruego (Norwegian)',
             'pt_BR' => 'Portugués Brasileño',
-<<<<<<< HEAD
             'ru' => 'Russian (Russian)',
             'bg' => 'Български (Български)',
             'sv' => 'Sueco (Swedish)',
             'th' => '(Thai)',
             'tr' => '(Turkish)',
             'uk' => '(Ukrainian)',
-=======
-            'ru'    => 'Russian (Russian)',
-            'sv'    => 'Sueco (Swedish)',
-            'th'    => '(Thai)',
-            'tr'    => '(Turkish)',
->>>>>>> 635d9c7410b0cb99eb680b6e71228f63cbb72d49
         ],
     ],
 ];
