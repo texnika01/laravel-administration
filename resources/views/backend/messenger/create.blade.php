@@ -15,7 +15,13 @@
                             <div class="col-md-9">
                                 <input class="form-control" id="text-input" type="text" name="subject" placeholder="subject"
                                        value="{{ old('subject') }}">
-                                <span class="help-block text-danger">* This is a help Subject</span>
+                                       @if($errors->has('subject'))
+                                            <span class="help-block text-danger">
+                                                {{$errors->first('subject')}}
+                                            </span>
+                                        @endif
+                                        <br/>
+                                <span class="help-block text-danger">* This is a help Message</span> 
                             </div>
                         </div>
                         <div class="form-group row">
@@ -24,6 +30,13 @@
                                 <textarea class="form-control" id="textarea-input" name="message" rows="9" placeholder="@lang('strings.backend.messages.text_messages')">
                                     {{ old('message') }}
                                 </textarea>
+                                @if($errors->has('message'))
+                                    <span class="help-block text-danger">
+                                        {{$errors->first('message')}}
+                                    </span>
+                                @endif
+                                <br/>
+                                
                                 <span class="help-block text-danger">* This is a help Subject</span>
                             </div>
                         </div>
@@ -33,12 +46,18 @@
                                 <div class="col-md-9 col-form-label">
                                     @foreach($users as $user)
                                     <div class="form-check form-check-inline mr-1">
-                                        <input class="form-check-input" id="inline-checkbox1" type="checkbox" value="{{ $user->id }}">
-                                        <label class="form-check-label" for="inline-checkbox1">{!!$user->name!!}</label>
+                                        <input class="form-check-input" name="recipients" id="inline-checkbox1" type="checkbox" value="{{ $user->id }}">
+                                        <label class="form-check-label" for="inline-checkbox1">{!!$user->first_name!!}</label>
                                     </div>
                                     @endforeach
+                                    <br/>
+                                    @if($errors->has('recipients'))
+                                        <span class="help-block text-danger">
+                                            {{$errors->first('recipients')}}
+                                        </span>
+                                    @endif
                                 <br>
-                                        <span class="help-block text-danger">* This is a help Subject</span>
+                                    <span class="help-block text-danger">* This is a help Messages from</span>
                                 </div>
 
                             @endif
@@ -51,7 +70,7 @@
                                 <i class="fa fa-ban"></i>Reset
                             </button>
                         </div>
-{!! Form::close() !!}
+                    {!! Form::close() !!}
 
                 </div>
                 <div class="card-footer text-danger">

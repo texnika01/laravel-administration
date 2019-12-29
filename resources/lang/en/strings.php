@@ -28,7 +28,11 @@ return [
             'title'   => 'Dashboard',
             'welcome' => 'Welcome',
         ],
+<<<<<<< HEAD
+        'messages' => [
+=======
 		'messages' => [
+>>>>>>> 635d9c7410b0cb99eb680b6e71228f63cbb72d49
 			'index' => 'You messages',
 			'no_messages' => 'Sorry, no threads.',
 			'create' => 'Create a new message',
@@ -39,7 +43,10 @@ return [
 			'' => '',
 			'' => '',
 		],
+<<<<<<< HEAD
+=======
 
+>>>>>>> 635d9c7410b0cb99eb680b6e71228f63cbb72d49
         'general' => [
             'all_rights_reserved' => 'All Rights Reserved.',
             'are_you_sure'        => 'Are you sure you want to do this?',

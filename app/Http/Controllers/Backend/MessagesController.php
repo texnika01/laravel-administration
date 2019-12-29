@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Backend;
 use Carbon\Carbon;
 use App\Models\Auth\User;
 use Illuminate\Http\Request;
-use Spatie\Html\Elements\Input;
+use  App\Http\Requests\Backend\MessagesRequest;
 use Cmgmyr\Messenger\Models\Thread;
 use App\Http\Controllers\Controller;
 use Cmgmyr\Messenger\Models\Message;
@@ -21,11 +21,7 @@ class MessagesController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->middleware(function ($request, $next) {
-			$user = User::find(1);
-			Auth::login($user);
-			return $next($request);
-		});
+		$this->middleware('auth');
 	}
 	/**
 	 * Show all of the message threads to the user.
@@ -34,14 +30,14 @@ class MessagesController extends Controller
 	 */
 	public function index()
 	{
-        $currentUserId = Auth::user()->id;
+        //$currentUserId = Auth::user()->id;
 		// All threads, ignore deleted/archived participants
-		$threads = Thread::getAllLatest()->get();
+		$threads = Thread::forUser(Auth::id())->latest('updated_at')->get();
 		// All threads that user is participating in
 		// $threads = Thread::forUser(Auth::id())->latest('updated_at')->get();
 		// All threads that user is participating in, with new messages
 		// $threads = Thread::forUserWithNewMessages(Auth::id())->latest('updated_at')->get();
-		return view('backend.messenger.index', compact('threads','currentUserId'));
+		return view('backend.messenger.index', compact('threads'));
 	}
 	/**
 	 * Shows a message thread.
@@ -78,32 +74,46 @@ class MessagesController extends Controller
 	/**
 	 * Stores a new message thread.
 	 *
+	 * @param  MessagesRequest  $request
 	 * @return mixed
 	 */
-	public function store()
+	public function store(MessagesRequest $request)
 	{
-		$input = Input::all();
-		$thread = Thread::create([
-			'subject' => $input['subject'],
-		]);
-		// Message
-		Message::create([
-			'thread_id' => $thread->id,
-			'user_id' => Auth::id(),
-			'body' => $input['message'],
-		]);
-		// Sender
-		Participant::create([
-			'thread_id' => $thread->id,
-			'user_id' => Auth::id(),
-			'last_read' => new Carbon,
-		]);
-		// Recipients
-		if (Input::has('recipients')) {
-			$thread->addParticipant($input['recipients']);
-        }
 
-		return redirect()->route('admin.messages');
+		$validateMessage = $request->validate([
+			'subject' => 'required|min:3|max:30',
+			'message'  => 'required|min:6|max:200',
+			'recipients' => 'required'
+            
+		]);
+		//dd($validateMessage);
+		if($validateMessage == false){
+			return redirect()->back();
+		}
+		else{
+			$thread = Thread::create([
+				'subject' => $request->input('subject'),
+			]);
+			// Message
+			Message::create([
+				'thread_id' => $thread->id,
+				'user_id' => Auth::id(),
+				'body' => $request->input('message'),
+			]);
+			// Sender
+			Participant::create([
+				'thread_id' => $thread->id,
+				'user_id' => Auth::id(),
+				'last_read' => new Carbon,
+			]);
+			// Recipients
+			if ($request->input('recipients')) {
+				$thread->addParticipant($request->input('recipients'));
+			}
+	
+			return redirect()->route('admin.messages');
+		}
+	
 	}
 	/**
 	 * Adds a new message to a current thread.
@@ -117,7 +127,7 @@ class MessagesController extends Controller
 			$thread = Thread::findOrFail($id);
 		} catch (ModelNotFoundException $e) {
 			Session::flash('error_message', 'The thread with ID: ' . $id . ' was not found.');
-			return redirect()->route('messages');
+			return redirect()->route('admin.messages');
 		}
 		$thread->activateAllParticipants();
 		// Message
@@ -137,6 +147,6 @@ class MessagesController extends Controller
 		if (Input::has('recipients')) {
 			$thread->addParticipant(Input::get('recipients'));
 		}
-		return redirect()->route('bcakend.messages.show', $id);
+		return redirect()->route('admin.messages.show', $id);
 	}
 }

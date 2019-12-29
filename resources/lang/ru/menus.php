@@ -72,10 +72,19 @@ return [
             'nl'    => 'Голландский (Dutch)',
             'no'    => 'норвежский (Norwegian)',
             'pt_BR' => 'Бразильский Португальский (Brazilian Portuguese)',
+<<<<<<< HEAD
+            'ru' => 'Русский (Russian)',
+            'bg' => 'Български (Български)',
+            'sv' => 'Шведский (Swedish)',
+            'th' => 'Тайский (Thai)',
+            'tr' => 'Турецкий (Turkish)',
+            'uk' => 'Украинский (Ukrainian)',
+=======
             'ru'    => 'Русский (Russian)',
             'sv'    => 'Шведский (Swedish)',
             'th'    => 'Тайский (Thai)',
             'tr'    => 'Турецкий (Turkish)',
+>>>>>>> 635d9c7410b0cb99eb680b6e71228f63cbb72d49
         ],
     ],
 ];

@@ -20,6 +20,14 @@ class DashboardController extends Controller
         $newuser = User::where('active', 0)->count();
         $fb = SocialAccount::where('provider', 'facebook')->count();
         $tw = SocialAccount::where('provider', 'twitter')->count();
-        return view('backend.dashboard',compact('user','newuser','fb','tw'));
+        $bit = SocialAccount::where('provider','bitbucket')->count();
+        $git = SocialAccount::where('provider','github')->count();
+        $google = SocialAccount::where('provider','google')->count();
+        $linkedin = SocialAccount::where('provider','linkedin')->count();
+
+        return view('backend.dashboard',compact(
+            'user','newuser','fb','tw','bit','git',
+            'google','linkedin'
+        ));
     }
 }

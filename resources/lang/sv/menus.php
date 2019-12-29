@@ -67,6 +67,24 @@ return [
             'de'    => 'Tyska (German)',
             'el'    => '(Greek)',
             'pt_BR' => 'Brasiliansk portugisiska (Brazilian Portuguese)',
+<<<<<<< HEAD
+            'en' => 'Engelska (English)',
+            'fa' => 'Perser (Persian)',
+            'fr' => 'Franska (French)',
+            'he' => 'Hebreiska (Hebrew)',
+            'id' => 'Indonesiska (Indonesian)',
+            'it' => 'Italienska (Italian)',
+            'ja' => '(Japanese)',
+            'nl' => 'Holländska (Dutch)',
+            'no' => 'Norsk (Norwegian)',
+            'es' => 'Spanska (Spanish)',
+            'ru' => 'Ryska (Russian)',
+            'bg' => 'Български (Български)',
+            'sv' => 'Svenska (Swedish)',
+            'th' => 'Thailändska (Thai)',
+            'tr' => '(Turkish)',
+            'uk' => '(Ukrainian)',
+=======
             'en'    => 'Engelska (English)',
             'fa'    => 'Perser (Persian)',
             'fr'    => 'Franska (French)',
@@ -81,6 +99,7 @@ return [
             'sv'    => 'Svenska (Swedish)',
             'th'    => 'Thailändska (Thai)',
             'tr'    => '(Turkish)',
+>>>>>>> 635d9c7410b0cb99eb680b6e71228f63cbb72d49
         ],
     ],
 ];

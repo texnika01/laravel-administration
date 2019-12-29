@@ -17,4 +17,6 @@ class User extends BaseUser
         UserRelationship,
         UserScope,
         Messagable;
+
+        
 }
